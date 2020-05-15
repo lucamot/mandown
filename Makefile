@@ -26,8 +26,9 @@ DEPDIR=depends
 # "Machine-dependant" options
 #MFLAGS=-fPIC
 
-CFLAGS=-c -g -O3 -fPIC -Wall -Wsign-compare -Iparser -Iblender -Iinclude -I/usr/include/libxml2
-LDFLAGS=-g -O3 -Wl,--copy-dt-needed-entries -lncursesw -lxml2 -Wall -Werror
+CFLAGS=-c -g -O3 -fPIC -Wall -Wsign-compare -Iparser -Iblender -Iinclude -I/usr/include/libxml2 -I/usr/local/Cellar/libxml2/2.9.10_1/include/libxml2
+LDFLAGS=-g -O3 -Wl, -lncurses -lxml2 -Wall -Werror
+#LDFLAGS=-g -O3 -Wl,--copy-dt-needed-entries -lncursesw -lxml2 -Wall -Werror
 CC=gcc
 
 MANDOWN_SRC=\

@@ -106,7 +106,7 @@ void nodeHandler(xmlNode *node, partsPtr dest, int indent)
         attr[1] = A_BOLD;
       }
       else if (IS_STRING("em", curNode->name)) {  //  * italic
-        attr[1] = A_ITALIC;
+        attr[1] = NCURSES_BITS(1U,23); // A_ITALIC; NCURSES_BITS(1U,23)
       }
       else if (IS_STRING("u", curNode->name) || IS_STRING("ins", curNode->name)) {  // * underline
         attr[1] = A_UNDERLINE;
